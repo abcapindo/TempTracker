@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
+An app to track all those temperatures that you can think of from BBQ, smoking meats, or just using the oven. Get notifications when the temperature falls below your the temperature that is set. Track the temperature from the full time you have been cooking or for only the past 5 minutes. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
