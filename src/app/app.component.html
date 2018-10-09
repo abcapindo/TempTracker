@@ -1,0 +1,35 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row> 
+    <span><fa-icon [icon]="faFire"></fa-icon> Track My Temp</span>
+    <span class="example-fill-remaining-space"></span>
+    <span style="margin-right: 10px">
+      <p>{{temp.c}}<ng2-wi [name]="'celsius'" style="font: 100;"></ng2-wi> / {{temp.f}} <ng2-wi [name]="'fahrenheit'" style="font: 100;"></ng2-wi></p>
+    </span>
+    <span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <fa-icon [icon]="faEllipsisV"></fa-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item>
+          <span>Nani?</span>
+        </button>
+      </mat-menu>
+    </span>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-tab-group color="warn">
+    <mat-tab label="5 Mins">
+        <ng-template matTabContent>
+            <app-five-minute-chart [updatedTemp]="temp"></app-five-minute-chart>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Full Burn">
+        <ng-template matTabContent>
+            <app-full-chart [updatedTemp]="temp"></app-full-chart>
+        </ng-template>  
+    </mat-tab>
+</mat-tab-group>
